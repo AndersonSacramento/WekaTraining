@@ -1,0 +1,27 @@
+apply plugin : 'java'
+
+
+repositories {
+  mavenCentral()
+}
+dependencies{
+   compile  group: 'nz.ac.waikato.cms.weka', name: 'weka-stable', version: '3.6.6'
+}
+
+task encode( type: JavaExec, dependsOn: classes){
+  main = 'com.tccsiuneb.wekatraining.ClusterTest'
+  classpath sourceSets.main.output.classesDir
+  classpath configurations.runtime
+}
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.com.mattwhipple.gradle:gradle-emacs-jdee:0.1.0"
+  }
+}
+
+apply plugin: "com.mattwhipple.emacs-jdee"

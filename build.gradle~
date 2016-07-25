@@ -1,0 +1,28 @@
+apply plugin : 'java'
+
+
+repositories {
+  mavenCentral()
+}
+dependencies{
+  // jsoup HTML parser library @ http://jsoup.org/
+  compile 'org.jsoup:jsoup:1.9.2'
+}
+
+task encode( type: JavaExec, dependsOn: classes){
+  main = 'com.tccsiuneb.dext.preprocessing.JsoupTest'
+  classpath sourceSets.main.output.classesDir
+  classpath configurations.runtime
+}
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.com.mattwhipple.gradle:gradle-emacs-jdee:0.1.0"
+  }
+}
+
+apply plugin: "com.mattwhipple.emacs-jdee"

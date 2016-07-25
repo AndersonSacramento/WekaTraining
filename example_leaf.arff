@@ -1,0 +1,26 @@
+
+
+@relation dom
+
+@attribute profundidade numeric
+@attribute irmaos  numeric
+@attribute pos_relative numeric
+@attribute pos_relative_parent numeric
+@attribute class_parent string
+@attribute element_parent {div,p,a,span}
+@attribute class_node {div,p,a,span}
+
+@data
+4,0,0,0,"messag_box",div,p
+4,0,0,1,"autor_box",div,p
+4,0,0,2,"comment_box",div,p
+4,0,0,3,"date_box",div,p
+4,0,0,0,"mesage_box",div,p
+4,0,0,1,"autor_box",div,p
+4,0,0,2,"comment_box",div,p
+4,0,0,3,"date_box",div,p
+4,0,0,0,"mesdage_box",div,p
+4,0,0,1,"autor_box",div,p
+4,0,0,2,"comment_box",div,p
+4,0,0,3,"date_box",div,p
+5,1,0,3,"date_box",div,p
